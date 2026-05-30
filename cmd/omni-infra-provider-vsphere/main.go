@@ -25,7 +25,7 @@ import (
 	"github.com/vmware/govmomi/vim25/methods"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
-	"gopkg.in/yaml.v3"
+	"go.yaml.in/yaml/v4"
 
 	"github.com/siderolabs/omni-infra-provider-vsphere/internal/pkg/config"
 	"github.com/siderolabs/omni-infra-provider-vsphere/internal/pkg/provider"

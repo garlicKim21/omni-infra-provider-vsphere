@@ -47,7 +47,8 @@ func (p *Provisioner) ensureSession(ctx context.Context) error {
 	}
 
 	p.logger.Warn("vSphere session inactive, attempting re-login")
-	p.logger.Debug("re-login details",
+	p.logger.Debug(
+		"re-login details",
 		zap.String("username", p.userInfo.Username()),
 		zap.Bool("has_password", func() bool {
 			_, ok := p.userInfo.Password()
@@ -309,7 +310,8 @@ func (p *Provisioner) ProvisionSteps() []provision.Step[*resources.Machine] {
 
 				vmName := pctx.GetRequestID()
 
-				logger.Info("creating VM",
+				logger.Info(
+					"creating VM",
 					zap.String("name", vmName),
 					zap.String("datacenter", data.Datacenter),
 					zap.String("resource_pool", data.ResourcePool),
